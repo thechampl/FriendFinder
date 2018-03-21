@@ -16,13 +16,14 @@ app.get("/survey", function(req, res) {
 // api routes
 app.get("/api/friends", function(req, res){
     res.json(friendData)
+    
 });
 
 app.post("/api/friends", function(req, res) {
     
 
     friendData.push(req.body);
-
+console.log(friendData)
   
 });
 
