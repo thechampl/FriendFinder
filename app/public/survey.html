@@ -244,6 +244,22 @@ console.log(friendScores);
 
         });
 
+        $.get("./api/friends", friendData,
+        function(data){
+          for(i=0; i<data.length; i++){
+            var totalDifferenceArray= [];            
+            totalDifference= parseInt(Math.abs(data[i].Answers[0] - friendScores[0]))+parseInt(Math.abs(data[i].Answers[1] - friendScores[1]))+parseInt(Math.abs(data[i].Answers[2] - friendScores[2]))+parseInt(Math.abs(data[i].Answers[3] - friendScores[3]))+parseInt(Math.abs(data[i].Answers[4] - friendScores[4]))+parseInt(Math.abs(data[i].Answers[5] - friendScores[5]))+parseInt(Math.abs(data[i].Answers[6] - friendScores[6]))+parseInt(Math.abs(data[i].Answers[7] - friendScores[7]))+parseInt(Math.abs(data[i].Answers[8] - friendScores[8]))+parseInt(Math.abs(data[i].Answers[9] - friendScores[9]))
+            totalDifferenceArray.push(totalDifference);
+            // var matchNumber = Math.min(totalDifference);
+            // var matchIndex = totalDifference.indexOf(matchNumber);
+            // console.log(matchNumber)
+            console.log(totalDifferenceArray)
+            // console.log(matchIndex);
+            
+
+          }
+        });
+
     });
 
 </script>
