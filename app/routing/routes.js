@@ -44,10 +44,14 @@ module.exports = function (app) {
             }
             console.log(totalDifference);
         }
-        console.log(lowIndex + "low Index");
-    console.log(friendData[lowIndex]);
+        
+        friendData.push(newFriend);
+        res.json(friendData[lowIndex]);
+        
+    
     });
 
+   
     
 
 
