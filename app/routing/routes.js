@@ -24,6 +24,7 @@ module.exports = function (app) {
     });
 
     app.post("/api/friends", function (req, res) {
+        var totalDifference = 0;
         var newFriend = req.body;
         console.log(newFriend);
         for (i = 0; i < friendData.length; i++) {
@@ -45,10 +46,12 @@ module.exports = function (app) {
             console.log(totalDifference);
         }
         
-        friendData.push(newFriend);
+
+        // error line 
+        // friendData.push(newFriend);
         res.json(friendData[lowIndex]);
         
-    
+        console.log(friendData)
     });
 
    
